@@ -1,0 +1,55 @@
+.character-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+  width: 100%;
+  max-width: 250px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Mantiene el contenido repartido */
+  padding: 12px;
+}
+
+.character-card img {
+  width: 100%;
+  height: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 6px;
+  object-fit: contain;
+}
+
+.character-card h3 {
+  font-size: 1.1rem;
+  color: #333;
+  margin-top: 12px;
+  font-weight: 600;
+  text-align: center; /* ✅ Centrado horizontalmente */
+  width: 100%; /* ✅ Ocupa todo el ancho disponible */
+}
+
+.character-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.character-list {
+  max-width: 1300px; /* limita ancho máximo */
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* fuerza 5 columnas fijas */
+  gap: 50px;
+  padding: 20px;
+
+  align-items: stretch; /* fuerza que todas las celdas sean del mismo alto */
+}
+
+.character-list-wrapper {
+  background: rgb(39, 43, 51); /* fondo gris */
+  padding: 40px 0;
+  width: 100%;
+}

@@ -1,0 +1,12 @@
+<div class="character-list-wrapper">
+  <div class="character-list">
+    @for (character of apiService.characters(); track character.id) {
+    <div class="character-card">
+      <img [src]="character.image" alt="{{ character.name }}" />
+      <h3>{{ character.name }}</h3>
+    </div>
+    } @empty {
+    <p>No se encontraron personajes.</p>
+    }
+  </div>
+</div>
